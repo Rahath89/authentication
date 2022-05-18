@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
-// mongoose.connect("mongodb+srv://Md-Rahath:Test123@cluster0.oawza.mongodb.net/userDB", {useNewUrlParser: true});
+
 mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true});
 
 const userSchema = new mongoose.Schema({
